@@ -1,0 +1,193 @@
+/* General Layout */
+body {
+    background-color: #f4f7f6; /* That clean, soft grey background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.converter-card {
+    background: white;
+    border: 1px solid #e0e0e0; /* Subtle grey border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="number"], 
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d1d5db; /* Modern medium grey */
+    border-radius: 10px;      /* Slightly rounder for a friendly feel */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Makes the color change smooth */
+    background-color: #ffffff;
+}
+
+/* This adds the Green "Active" state when clicking */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #28a745; /* Your specific Green */
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.1); /* Soft Green glow */
+}
+
+/* The Flashing Button */
+.flash-button {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    margin: 20px 0;
+    animation: simpleHighlight 3s infinite; /* The loop */
+}
+
+@keyframes simpleHighlight {
+    0% { background-color: #28a745; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); }
+    50% { background-color: #218838; box-shadow: 0 4px 25px rgba(40, 167, 69, 0.4); }
+    100% { background-color: #28a745; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); }
+}
+
+/* Fake Ad Placeholders */
+.ad-box {
+    width: 100%;
+    min-height: 100px; /* Reduced from 250px for a sleeker look */
+    background-color: #f9fafb; /* Lighter grey to feel less heavy */
+    border: 1px dashed #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 13px;
+    margin: 15px 0; /* Slightly tighter spacing */
+    border-radius: 6px;
+}
+
+#resultBox {
+    width: 100%;
+    min-height: 150px;
+    padding: 20px;
+    background-color: #ffffff; /* Brighter background for a cleaner look */
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    
+    /* THE KEY CHANGE: Modern font stack */
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500; /* Makes the numbers a bit easier to read */
+    color: #1f2937; /* Slightly darker for better contrast */
+    line-height: 1.8; /* Extra breathing room between results */
+    
+    resize: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+/* Add a subtle glow when the box has content */
+#resultBox:not(:placeholder-shown) {
+    border-color: #28a745;
+    background-color: #ffffff;
+}
+
+.download-container {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.dl-btn {
+    flex: 1;
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dl-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.flag-selection p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.flag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two neat columns */
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.flag-grid label {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.flag-grid label:hover {
+    background: #e9ecef;
+}
+
+.flag-grid input {
+    width: auto; /* Keeps the checkbox small */
+    margin-right: 10px;
+}
+.seo-content {
+    max-width: 600px; /* This matches the width of your converter card */
+    margin: 40px auto; /* This centers it and adds space below the tool */
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* A lighter shadow than the tool */
+}
+/* Space out the guide section */
+.seo-content {
+    line-height: 1.8; /* More space between lines of text */
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.seo-content p {
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Space out the list items */
+.seo-content li {
+    margin-bottom: 15px; /* Adds breathing room between each step */
+}
+
+/* Style the diagram container */
+.measure-img {
+    display: block;
+    /* Change this value to make the image smaller */
+    max-width: 350px; 
+    height: auto;
+    margin: 20px auto; /* Keeps it centered with space around it */
+    border-radius: 12px;
+    border: 1px solid #eee; /* Adds a nice subtle frame */
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 10px;
+}

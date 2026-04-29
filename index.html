@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>International Shoe Size Converter | US, UK, EU, JP</title>
+    <meta name="description" content="Free tool to convert shoe sizes between US, UK, Europe, and Japan. Includes a guide on how to measure your feet accurately at home.">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="converter-card">
+        <div class="input-group">
+            <input type="number" id="shoeSize" placeholder="Enter Size">
+            <input type="text" id="countryFrom" placeholder="Country (e.g. UK)">
+        </div>
+  <div class="flag-selection">
+    <p>Select destination countries:</p>
+    <div class="flag-grid">
+       <label><input type="checkbox" name="target" value="US"> 🇺🇸 USA</label>
+<label><input type="checkbox" name="target" value="UK"> 🇬🇧 UK</label>
+<label><input type="checkbox" name="target" value="EU"> 🇪🇺 Europe</label>
+<label><input type="checkbox" name="target" value="JP"> 🇯🇵 Japan</label>
+<label><input type="checkbox" name="target" value="AU"> 🇦🇺 Australia</label>
+<label><input type="checkbox" name="target" value="MX"> 🇲🇽 Mexico</label>
+<label><input type="checkbox" name="target" value="CN"> 🇨🇳 China</label>
+<label><input type="checkbox" name="target" value="BR"> 🇧🇷 Brazil</label>
+    </div>
+</div>
+
+        <button id="convertBtn" class="flash-button">CONVERT</button>
+
+        <div class="ad-box">Advertisement Placeholder</div>
+
+        <textarea id="resultBox" readonly placeholder="Your converted sizes will appear here..."></textarea>
+
+        <div class="download-container">
+            <button id="dlTxt" class="dl-btn" disabled>Download .txt</button>
+            <button id="dlJson" class="dl-btn" disabled>Download .json</button>
+            <button id="dlPdf" class="dl-btn" disabled>Download .pdf</button>
+        </div>
+
+        <div class="ad-box">Advertisement Placeholder</div>
+    </div>
+    <section class="seo-content">
+    <hr>
+    <h2>Understanding International Shoe Sizing</h2>
+    <h3 class="seo-question">What is a shoe size?</h3>
+<p class="seo-answer">
+    A shoe size is an alphanumeric indication of the fitting size of a shoe for a person. 
+    While it mainly represents the length of the foot, some specialized systems also 
+    account for the width. Because there is no single global standard, shoppers often 
+    need to convert between US, UK, European, and Asian scales.
+</p>
+    <p>To get the most accurate conversion, you need an accurate starting measurement. Follow these steps to find your foot length in centimeters or inches:</p>
+    
+   <div class="steps-box">
+    <ol>
+        <li><strong>Prepare:</strong> Tape a piece of plain paper to a hard floor.</li>
+        <li><strong>Position:</strong> Stand with one foot on the paper and your heel touching the wall.</li>
+        <li><strong>Mark:</strong> Mark the furthest point of your longest toe with a vertical pencil.</li>
+        <li><strong>Measure:</strong> Use a ruler to measure from the heel edge to your mark.</li>
+        <li><strong>Repeat:</strong> Measure both feet and use the larger measurement.</li>
+    </ol>
+    
+    <div class="measurement-diagram">
+    <img src="https://i0.wp.com/modernsafetyshoes.com/wp-content/uploads/2020/06/1697A2AB-82CB-4886-AE8F-87B04F46DD30.jpeg?resize=904%2C1024&ssl=1" 
+         alt="How to measure foot size diagram" 
+         class="measure-img">
+    <p class="caption">Follow these visual steps to get your exact measurement in millimeters or inches.</p>
+</div>
+        <li><strong>The Thumb Rule:</strong> There should be about a thumb’s width of space between your longest toe and the front of the shoe.</li>
+        <li><strong>Time of Day:</strong> Always measure your feet in the afternoon or evening; feet tend to swell throughout the day.</li>
+        <li><strong>Brand Variation:</strong> Remember that "size 10" for a running shoe brand might fit differently than a "size 10" dress shoe. Always check brand-specific charts if available.</li>
+    </ul>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
