@@ -261,12 +261,11 @@ input:focus, textarea:focus {
 }
 
 .brand-card {
-    background: #ffffff;
+    background-color: var(--card-bg) !important; /* Forces the background to change */
+    color: var(--text-color) !important;       /* Forces the main text to change */
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s;
+    border: 1px solid var(--border-color);
 }
 
 .brand-card:hover {
@@ -280,10 +279,12 @@ input:focus, textarea:focus {
 }
 
 .brand-card p {
-    color: #4b5563;
+    color: var(--text-color) !important;       /* This fixes the "disappearing" description */
+    opacity: 0.9;                              /* Keeps it slightly softer than the heading */
     font-size: 0.95rem;
     line-height: 1.5;
 }
+
 .size-table-section {
     max-width: 800px;
     margin: 40px auto;
@@ -299,19 +300,21 @@ input:focus, textarea:focus {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background-color: var(--card-bg); /* Fix: Uses dark mode background */
     text-align: left;
+    transition: background-color 0.3s ease;
 }
 
 th, td {
     padding: 15px;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid var(--border-color); /* Fix: Border changes color */
     font-size: 14px;
+    color: var(--text-color); /* Fix: Text turns white in dark mode */
 }
 
 th {
-    background-color: #f9fafb;
-    color: #374151;
+    background-color: var(--bg-color); /* Slightly different shade for header */
+    color: var(--text-color);
     font-weight: 600;
 }
 
@@ -321,4 +324,26 @@ tr:last-child td {
 
 tr:hover {
     background-color: #fefefe;
+}
+.button-stack {
+    display: flex;
+    flex-direction: column; /* Stacks them vertically */
+    gap: 12px;              /* Space between buttons */
+    margin-top: 20px;
+}
+
+#clearBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6b7280; /* A neutral grey */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#clearBtn:hover {
+    background-color: #4b5563;
 }

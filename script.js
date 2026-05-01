@@ -66,10 +66,30 @@ function downloadFile(content, fileName, contentType) {
     a.download = fileName;
     a.click();
 }
-// Clears the result box when the user starts typing a new size
-document.getElementById('shoeSize').addEventListener('focus', function() {
-    document.getElementById('resultBox').value = "";
-    // Optionally disable download buttons again until next conversion
+// --- THE ULTIMATE CLEAR ALL FIX ---
+document.getElementById('clearBtn').addEventListener('click', function() {
+    
+    // 1. Clear the "Enter Size" and "Country (e.g. UK)" inputs
+    // We target them by their placeholder text to be 100% sure
+    document.querySelector('input[placeholder="Enter Size"]').value = '';
+    document.querySelector('input[placeholder*="Country"]').value = '';
+
+    // 2. Uncheck EVERY checkbox in the destination list
+    const allCheckboxes = document.querySelectorAll('.destination-countries input[type="checkbox"]');
+    allCheckboxes.forEach(box => {
+        box.checked = false;
+    });
+
+    // 3. Clear the Results Box
+    // In your code this is likely 'resultsText' or 'resultBox'
+    const displayArea = document.getElementById('resultBox') || document.getElementById('resultsDisplay');
+    if (displayArea) {
+        displayArea.value = 'Your converted sizes will appear here...';
+    }
+
+    // 4. Reset the Download Buttons to grey/disabled
     const dlBtns = document.querySelectorAll('.dl-btn');
     dlBtns.forEach(btn => btn.disabled = true);
+    
+    console.log("Page cleared and reset!");
 });
