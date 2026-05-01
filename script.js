@@ -41,8 +41,8 @@ document.getElementById('convertBtn').addEventListener('click', function() {
     });
 
     // 3. Finalize Results Box
-    resultsText += `━━━━━━━━━━━━━━━━━━━━\nReady to shop! 👟`;
-    resultBox.value = resultsText;
+resultsText += `\n--------------------------\nReady to shop!`;
+resultBox.value = resultsText;
 
     // 4. Activate Download Buttons
     const dlBtns = document.querySelectorAll('.dl-btn');
