@@ -246,3 +246,41 @@ input:focus, textarea:focus {
     min-height: 100px;
     resize: vertical;
 }
+.brand-guides {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.brand-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+}
+
+.brand-card h3 {
+    margin-top: 0;
+    color: #16a34a; /* Matches your Green Convert button */
+    font-size: 1.25rem;
+}
+
+.brand-card p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
