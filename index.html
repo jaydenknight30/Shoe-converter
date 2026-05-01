@@ -79,14 +79,24 @@
 </section>
 
     <script src="script.js"></script>
-    
+
     <footer class="site-footer">
     <div class="footer-content">
         <p>© 2026 Shoe Size Converter | Accurate International Sizing</p>
-        <div class="footer-links">
-            <a href="mailto:your-business-email@example.com">Contact Support</a>
-            <a href="#">Privacy Policy</a>
-        </div>
+        <section id="contact" class="contact-section">
+    <h3>Questions or Feedback?</h3>
+    <p>Send us a message and we'll get back to you shortly!</p>
+    
+    <form action="https://formspree.io/f/mzdobvyn" method="POST" class="contact-form">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="How can we help?" required></textarea>
+        <button type="submit" id="convertBtn" style="margin-top: 10px;">Send Message</button>
+    </form>
+</section>
+
+<div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+</div>
         <p style="font-size: 12px; margin-top: 10px; color: #9ca3af;">
             Created to help shoppers find the perfect fit, every time.
         </p>

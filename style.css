@@ -216,3 +216,33 @@ input:focus, textarea:focus {
 .footer-links a:hover {
     text-decoration: underline;
 }
+.contact-section {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
