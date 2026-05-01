@@ -75,7 +75,7 @@ input:focus, textarea:focus {
 }
 
 #resultBox {
-    width: 100%;
+    width: 85%;
     min-height: 150px;
     padding: 20px;
     background-color: #ffffff; /* Brighter background for a cleaner look */
