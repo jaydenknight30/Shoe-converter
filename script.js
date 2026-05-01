@@ -10,9 +10,8 @@ document.getElementById('convertBtn').addEventListener('click', function() {
         return;
     }
 
-    let resultsText = `✨ CONVERSION RESULTS ✨\n━━━━━━━━━━━━━━━━━━━━\n`;
+    let resultsText = `✨ CONVERSION RESULTS ✨\n----------------------------\n`;
     let jsonData = { original: { size, from }, conversions: [] };
-
     // 2. Conversion Loop
     targets.forEach(target => {
         let convertedValue = 0;
@@ -41,24 +40,54 @@ document.getElementById('convertBtn').addEventListener('click', function() {
     });
 
     // 3. Finalize Results Box
-resultsText += `\n--------------------------\nReady to shop!`;
-resultBox.value = resultsText;
+    resultsText += `\n----------------------------\nReady to shop!`;
+    resultBox.value = resultsText;
 
-    // 4. Activate Download Buttons
+    // 4. Activate Download Buttons with Unique Timestamp
     const dlBtns = document.querySelectorAll('.dl-btn');
     dlBtns.forEach(btn => btn.disabled = false);
 
-    document.getElementById('dlTxt').onclick = () => downloadFile(resultsText, 'shoe-size.txt', 'text/plain');
-    document.getElementById('dlJson').onclick = () => downloadFile(JSON.stringify(jsonData, null, 2), 'shoe-size.json', 'application/json');
+    const timestamp = getTimestamp();
+
+    document.getElementById('dlTxt').onclick = () => downloadFile(resultsText, `shoe-size-${timestamp}.txt`, 'text/plain');
+    document.getElementById('dlJson').onclick = () => downloadFile(JSON.stringify(jsonData, null, 2), `shoe-size-${timestamp}.json`, 'application/json');
     document.getElementById('dlPdf').onclick = () => {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
         doc.text(resultsText, 10, 10);
-        doc.save('shoe-size.pdf');
+        doc.save(`shoe-size-${timestamp}.pdf`);
     };
+}); // This correctly closes the convertBtn listener
+
+// --- THE ULTIMATE CLEAR ALL FIX ---
+document.getElementById('clearBtn').addEventListener('click', function() {
+    // 1. Clear Inputs
+    document.getElementById('shoeSize').value = '';
+    document.getElementById('countryFrom').value = '';
+
+    // 2. Uncheck every checkbox inside the flag-grid
+    const allCheckboxes = document.querySelectorAll('.flag-grid input[type="checkbox"]');
+    allCheckboxes.forEach(box => {
+        box.checked = false;
+    });
+
+    // 3. Reset the Results Box
+    const displayArea = document.getElementById('resultBox');
+    if (displayArea) {
+        displayArea.value = 'Your converted sizes will appear here...';
+    }
+
+    // 4. Disable Download Buttons
+    document.querySelectorAll('.dl-btn').forEach(btn => btn.disabled = true);
 });
 
-// 5. Shared Download Function
+// --- SHARED HELPER FUNCTIONS (Outside the listeners) ---
+
+function getTimestamp() {
+    const now = new Date();
+    return now.toISOString().replace(/:/g, '.'); // RFC3339 format safe for Windows filenames
+}
+
 function downloadFile(content, fileName, contentType) {
     const a = document.createElement("a");
     const file = new Blob([content], { type: contentType });
@@ -66,30 +95,3 @@ function downloadFile(content, fileName, contentType) {
     a.download = fileName;
     a.click();
 }
-// --- THE ULTIMATE CLEAR ALL FIX ---
-document.getElementById('clearBtn').addEventListener('click', function() {
-    
-    // 1. Clear the "Enter Size" and "Country (e.g. UK)" inputs
-    // We target them by their placeholder text to be 100% sure
-    document.querySelector('input[placeholder="Enter Size"]').value = '';
-    document.querySelector('input[placeholder*="Country"]').value = '';
-
-    // 2. Uncheck EVERY checkbox in the destination list
-    const allCheckboxes = document.querySelectorAll('.destination-countries input[type="checkbox"]');
-    allCheckboxes.forEach(box => {
-        box.checked = false;
-    });
-
-    // 3. Clear the Results Box
-    // In your code this is likely 'resultsText' or 'resultBox'
-    const displayArea = document.getElementById('resultBox') || document.getElementById('resultsDisplay');
-    if (displayArea) {
-        displayArea.value = 'Your converted sizes will appear here...';
-    }
-
-    // 4. Reset the Download Buttons to grey/disabled
-    const dlBtns = document.querySelectorAll('.dl-btn');
-    dlBtns.forEach(btn => btn.disabled = true);
-    
-    console.log("Page cleared and reset!");
-});
