@@ -399,3 +399,73 @@ tr:hover {
     text-decoration: underline;
     color: #2563eb;
 }
+/* Professional FAQ Styling */
+.faq-item {
+    background: #f9fafb; /* Light grey lift */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px); /* Subtle lift on hover */
+    border-color: #2ecc71; /* Glows green like your brand */
+}
+
+.faq-item h3 {
+    color: #111827;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Adds a small green Q icon before each question */
+.faq-item h3::before {
+    content: "Q:";
+    margin-right: 10px;
+    color: #2ecc71;
+    font-weight: 800;
+}
+/* --- FAQ Page Card Styles --- */
+.faq-item {
+    background: #f9fafb; 
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    text-align: left; /* Ensures text stays left-aligned inside the centered card */
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    border-color: #2ecc71;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+    color: #111827;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Adds the green 'Q' prefix */
+.faq-item h3::before {
+    content: "Q:";
+    margin-right: 12px;
+    color: #2ecc71;
+    font-weight: 800;
+}
+
+.faq-item p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    padding-left: 28px; 
+}
