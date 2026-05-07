@@ -77,18 +77,19 @@ input:focus, textarea:focus {
 #resultBox {
     width: 80%;
     min-height: 150px;
+    margin-top: 25px; /* The gap you wanted */
     padding: 20px;
     background-color: #ffffff; /* Brighter background for a cleaner look */
     border: 2px solid #e5e7eb;
     border-radius: 12px;
-    
+
     /* THE KEY CHANGE: Modern font stack */
     font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 500; /* Makes the numbers a bit easier to read */
     color: #1f2937; /* Slightly darker for better contrast */
     line-height: 1.8; /* Extra breathing room between results */
-    
+
     resize: none;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
