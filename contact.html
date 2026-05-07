@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shoe Size Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-card">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="index.html" style="text-decoration: none; color: #2ecc71; font-weight: bold; font-size: 0.9rem;">&larr; Back to Converter</a>
+            <h1 style="margin-top: 15px; font-size: 2rem; color: #1f2937;">Questions or Feedback?</h1>
+            <p style="color: #6b7280; font-size: 1rem;">Send us a message and we'll get back to you shortly!</p>
+        </div>
+
+        <form action="https://formspree.io/f/mzdobvyn" method="POST" class="contact-form">
+            <input type="email" name="email" placeholder="Your Email" required 
+                   style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e5e7eb; border-radius: 8px; box-sizing: border-box;">
+            
+            <textarea name="message" placeholder="How can we help?" required 
+                      style="width: 100%; height: 150px; padding: 12px; margin-bottom: 15px; border: 1px solid #e5e7eb; border-radius: 8px; box-sizing: border-box; resize: none;"></textarea>
+            
+            <button type="submit" id="convertBtn" style="width: 100%;">Send Message</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px;">
+            <p style="font-size: 0.8rem; color: #9ca3af;">&copy; 2026 ShoeSizeHelper.com</p>
+        </div>
+    </div>
+</body>
+</html>
