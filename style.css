@@ -360,3 +360,31 @@ tr:hover {
     text-align: left;
     box-sizing: border-box;
 }
+.more-faq-link {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e5e7eb;
+    text-align: center;
+}
+
+.more-faq-link p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.more-faq-link a {
+    color: #2ecc71; /* Matches your green CONVERT button */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.more-faq-link a:hover {
+    color: #27ae60;
+    text-decoration: underline;
+}
+/* Ensure the FAQ page text doesn't look cramped */
+.faq-section p {
+    margin-bottom: 15px;
+    color: #4b5563;
+}
