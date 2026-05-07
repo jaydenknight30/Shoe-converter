@@ -469,3 +469,13 @@ tr:hover {
     font-size: 0.95rem;
     padding-left: 28px; 
 }
+.footer-links a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
