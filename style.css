@@ -8,10 +8,16 @@ body {
     padding: 40px 20px;
 }
 
+/* This keeps the card from stretching too wide on desktop */
 .converter-card {
-    background: white;
-    border: 1px solid #e0e0e0; /* Subtle grey border */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 95%;
+    max-width: 500px; 
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-sizing: border-box; 
 }
 
 .input-group {
@@ -74,24 +80,20 @@ input:focus, textarea:focus {
     border-radius: 6px;
 }
 
+/* This makes the result box fill the card perfectly */
 #resultBox {
-    width: 80%;
+    width: 100%; 
     min-height: 150px;
-    margin-top: 25px; /* The gap you wanted */
+    margin-top: 25px;
     padding: 20px;
-    background-color: #ffffff; /* Brighter background for a cleaner look */
+    background-color: #ffffff;
     border: 2px solid #e5e7eb;
     border-radius: 12px;
-
-    /* THE KEY CHANGE: Modern font stack */
-    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 500; /* Makes the numbers a bit easier to read */
-    color: #1f2937; /* Slightly darker for better contrast */
-    line-height: 1.8; /* Extra breathing room between results */
-
+    line-height: 1.8;
     resize: none;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box; 
     margin-bottom: 20px;
 }
 
@@ -348,35 +350,13 @@ tr:hover {
 #clearBtn:hover {
     background-color: #4b5563;
 }
+
+/* This makes the FAQ fill the card perfectly */
 .faq-section {
-    margin-top: 40px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
     text-align: left;
-}
-
-.faq-section h2 {
-    color: #1f2937;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #2ecc71;
-    display: inline-block;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-}
-
-.faq-item h3 {
-    font-size: 1.1rem;
-    color: #1f2937;
-    margin-bottom: 8px;
-}
-
-.faq-item p {
-    color: #4b5563;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    box-sizing: border-box;
 }
