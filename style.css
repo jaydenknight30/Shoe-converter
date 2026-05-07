@@ -388,3 +388,14 @@ tr:hover {
     margin-bottom: 15px;
     color: #4b5563;
 }
+.footer-links a {
+    color: #3b82f6; /* A clean, clickable blue */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #2563eb;
+}
