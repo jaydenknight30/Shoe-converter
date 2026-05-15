@@ -7,7 +7,38 @@ body {
     align-items: center;
     padding: 40px 20px;
 }
+/* Language Bar Styling */
+.language-bar {
+    background-color: #f8f9fa; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; 
+    border-bottom: 1px solid #eee;
+    font-family: 'Inter', sans-serif; /* Or your site font */
+    font-size: 13px;
+    letter-spacing: 1px;
+}
 
+.language-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-link {
+    text-decoration: none;
+    color: #888;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.lang-link:hover, .lang-link.active {
+    color: #000;
+}
+
+.divider {
+    color: #ddd;
+}
 /* This keeps the card from stretching too wide on desktop */
 .converter-card {
     width: 95%;
