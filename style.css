@@ -7,33 +7,32 @@ body {
     align-items: center;
     padding: 40px 20px;
 }
-/* Language Bar Styling */
+/* This makes the bar stay at the very top and look clean */
 .language-bar {
-    background-color: #f8f9fa; 
+    width: 100%;
+    background-color: #f8f9fa;
     padding: 10px 20px;
     display: flex;
-    justify-content: flex-end; 
-    border-bottom: 1px solid #eee;
-    font-family: 'Inter', sans-serif; /* Or your site font */
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-.language-options {
-    display: flex;
+    justify-content: flex-end; /* Pushes it to the top right */
     align-items: center;
-    gap: 10px;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
-.lang-link {
-    text-decoration: none;
-    color: #888;
-    font-weight: 600;
-    transition: color 0.2s;
+.language-bar label {
+    margin-right: 10px;
+    color: #666;
+    font-weight: bold;
 }
 
-.lang-link:hover, .lang-link.active {
-    color: #000;
+#lang-select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
 }
 
 .divider {

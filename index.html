@@ -39,14 +39,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <div class="language-bar">
-    <div class="language-options">
-        <a href="https://shoesizehelper.com/" class="lang-link active">EN</a>
-        <span class="divider">|</span>
-        <a href="https://shoesizehelper.com/es/" class="lang-link">ES</a>
-        <span class="divider">|</span>
-        <a href="https://shoesizehelper.com/kr/" class="lang-link">KR</a>
-    </div>
+   <div class="language-bar">
+    <label for="lang-select">Language:</label>
+    <select id="lang-select" onchange="location = this.value;">
+        <option value="https://shoesizehelper.com/" selected>English (EN)</option>
+        <option value="https://shoesizehelper.com/es/">Español (ES)</option>
+        <option value="https://shoesizehelper.com/kr/">한국어 (KR)</option>
+        <option value="https://shoesizehelper.com/fr/">Français (FR)</option>
+        <option value="https://shoesizehelper.com/de/">Deutsch (DE)</option>
+        <option value="https://shoesizehelper.com/jp/">日本語 (JP)</option>
+    </select>
 </div>
 
     <div class="converter-card">
