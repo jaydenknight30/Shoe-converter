@@ -7,37 +7,7 @@ body {
     align-items: center;
     padding: 40px 20px;
 }
-/* This makes the bar stay at the very top and look clean */
-.language-bar {
-    width: 100%;
-    background-color: #f8f9fa;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end; /* Pushes it to the top right */
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    box-sizing: border-box;
-}
 
-.language-bar label {
-    margin-right: 10px;
-    color: #666;
-    font-weight: bold;
-}
-
-#lang-select {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: white;
-    cursor: pointer;
-}
-
-.divider {
-    color: #ddd;
-}
 /* This keeps the card from stretching too wide on desktop */
 .converter-card {
     width: 95%;
