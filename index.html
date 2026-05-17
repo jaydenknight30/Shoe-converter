@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
      <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7LVVNBYFG"></script>
@@ -12,7 +12,7 @@
 </script>
 
     <meta charset="UTF-8">
-    <title>Shoe Size Helper | Instant International Converter</title>
+    <title>Conversor de Tallas de Zapatos | Guía Internacional</title>
     
     <link rel="canonical" href="https://shoesizehelper.com/" />
 
@@ -35,15 +35,15 @@
     
     <meta name="description" content="Free tool to convert shoe sizes between US, UK, Europe, and Japan. Includes a guide on how to measure your feet accurately at home.">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
    <div class="language-bar">
     <label for="lang-select">Language:</label>
     <select id="lang-select" onchange="location = this.value;">
-        <option value="https://shoesizehelper.com/" selected>English (EN)</option>
-        <option value="https://shoesizehelper.com/es/">Español (ES)</option>
+        <option value="https://shoesizehelper.com/">English (EN)</option>
+        <option value="https://shoesizehelper.com/es/" selected>Español (ES)</option>
         <option value="https://shoesizehelper.com/kr/">한국어 (KR)</option>
         <option value="https://shoesizehelper.com/fr/">Français (FR)</option>
         <option value="https://shoesizehelper.com/de/">Deutsch (DE)</option>
@@ -53,11 +53,11 @@
 
     <div class="converter-card">
         <div class="input-group">
-            <input type="number" id="shoeSize" placeholder="Enter Size">
-            <input type="text" id="countryFrom" placeholder="Country (e.g. UK)">
+            <input type="number" id="shoeSize" placeholder="Ingresar talla">
+            <input type="text" id="countryFrom" placeholder="País (ej. UK)"
         </div>
   <div class="flag-selection">
-    <p>Select destination countries:</p>
+    <p>Seleccionar países de destino:</p>
     <div class="flag-grid">
        <label><input type="checkbox" name="target" value="US"> 🇺🇸 USA</label>
 <label><input type="checkbox" name="target" value="UK"> 🇬🇧 UK</label>
@@ -70,18 +70,18 @@
     </div>
 </div>
 
-        <button id="convertBtn" class="flash-button">CONVERT</button>
+        <button id="convertBtn" class="flash-button">CONVERTIR</button>
 
         <div class="button-stack">
-    <button type="button" id="clearBtn">CLEAR ALL</button>
+    <button type="button" id="clearBtn">BORRAR TODO</button>
 </div>
 
-<textarea id="resultBox" readonly placeholder="Your converted sizes will appear here..."></textarea>
+<textarea id="resultBox" readonly placeholder="Tus tallas convertidas aparecerán aquí..."></textarea>
 
         <div class="download-container">
-            <button id="dlTxt" class="dl-btn" disabled>Download .txt</button>
-            <button id="dlJson" class="dl-btn" disabled>Download .json</button>
-            <button id="dlPdf" class="dl-btn" disabled>Download .pdf</button>
+            <button id="dlTxt" class="dl-btn" disabled>Descargar .txt</button>
+            <button id="dlJson" class="dl-btn" disabled>Descargar .json</button>
+            <button id="dlPdf" class="dl-btn" disabled>Descargar .pdf</button>
         </div>
 
 
@@ -100,25 +100,25 @@
 
 
 <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Preguntas Frecuentes</h2>
     
     <div class="faq-item">
-        <h3>How do I convert US shoe sizes to UK?</h3>
-        <p>Generally, a US men's size is one full size larger than a UK size. For example, a US 10 is typically a UK 9. Use our tool above for precise conversions across different regions.</p>
+        <h3>¿Cómo convierto tallas de zapatos de EE.UU. a UK?</h3>
+        <p>Generalmente, una talla de hombre en EE.UU. es una talla completa más grande que una talla en UK. Por ejemplo, un EE.UU. 10 es típicamente un UK 9. Usa nuestra herramienta arriba para conversiones precisas a través de diferentes regiones.</p>
     </div>
 
     <div class="faq-item">
-        <h3>Are Nike and Adidas shoe sizes the same?</h3>
-        <p>Not always. Different brands use slightly different molds. It is always best to check the CM (centimeter) or JP (Japanese) size on your current shoes, as that measurement is the most consistent across brands.</p>
+        <h3>¿Son las tallas de Nike y Adidas las mismas?</h3>
+        <p>No siempre. Diferentes marcas usan moldes ligeramente diferentes. Es siempre mejor verificar la talla CM (centímetro) o JP (japonés) en tus zapatos actuales, ya que esa medición es la más consistente a través de las marcas.</p>
     </div>
 
     <div class="faq-item">
-        <h3>How can I measure my foot size at home?</h3>
-        <p>Place your foot on a piece of paper, trace the outline, and measure the distance from your heel to your longest toe. Compare this measurement to our JP/CM size column for the most accurate fit.</p>
+        <h3>¿Cómo puedo medir el tamaño de mi pie en casa?</h3>
+        <p>Coloca tu pie sobre un trozo de papel, traza el contorno y mide la distancia desde tu talón hasta tu dedo más largo. Compara esta medición con nuestra columna de tallas JP/CM para obtener el ajuste más preciso.</p>
      </div>
 
     <div class="more-faq-link">
-        <p>Have more questions? <a href="faq.html">View our full FAQ page &rarr;</a></p>
+        <p>¿Tienes más preguntas? <a href="faq.html">Ver nuestra página completa de Preguntas Frecuentes &rarr;</a></p>
     </div>
 
          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2241604405609246"
